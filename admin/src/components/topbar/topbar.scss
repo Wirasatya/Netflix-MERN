@@ -1,0 +1,79 @@
+.topbar {
+  display: flex;
+  width: 100%;
+  height: 49px;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  background-color: white;
+  .wrapper {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .left {
+      span {
+        font-weight: bold;
+        font-size: 30px;
+        color: darkblue;
+        cursor: pointer;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      .iconContainer {
+        position: relative;
+        cursor: pointer;
+        margin-right: 10px;
+        color: #555;
+        .badge {
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          top: -5px;
+          right: 0;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 10px;
+        }
+        .options {
+          display: none;
+          background-color: bisque;
+          border-radius: 5px;
+          span {
+            padding: 10px;
+            cursor: pointer;
+            z-index: 99;
+          }
+        }
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            span {
+              padding: 10px;
+              cursor: pointer;
+              font-size: 10px;
+              z-index: 99;
+            }
+          }
+        }
+      }
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}

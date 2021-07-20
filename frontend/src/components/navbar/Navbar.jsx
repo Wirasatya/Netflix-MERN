@@ -16,7 +16,6 @@ const Navbar = () => {
 
   const handleLogout = (e) => {
     e.preventDefault();
-    sessionStorage.clear();
     dispatch({
       type: "SET_USER",
       user: null,
